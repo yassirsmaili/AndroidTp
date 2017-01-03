@@ -22,13 +22,15 @@
             android:layout_height="wrap_content"
             android:id="@+id/txt"
             android:textColor="#FFF"
-            android:textSize="25dp"
+            android:textSize="15dp"
             android:layout_weight="1" />
 
     </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#CCC"
-        ></View>
+    <!--
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="2dp"
+           android:background="#CCC"
+           ></View>
+           !-->
 </LinearLayout>

@@ -13,15 +13,25 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        TextView txtTitre = (TextView)findViewById(R.id.textView);
-        TextView txtDesc  = (TextView)findViewById(R.id.textView2);
+        TextView nom = (TextView)findViewById(R.id.textView);
+        TextView tel = (TextView)findViewById(R.id.textView1);
+        TextView email  = (TextView)findViewById(R.id.textView2);
         ImageView image   = (ImageView)findViewById(R.id.imageView);
+        ImageView im   = (ImageView)findViewById(R.id.imageView1);
         Bundle b = getIntent().getExtras();
         String titre = b.getString("titre");
-        String desc = b.getString("description");
-        int img = b.getInt("image");
-        txtTitre.setText(titre);
-        txtDesc.setText(desc);
-        image.setImageResource(img);
+        String tele = b.getString("tel");
+        boolean fav = b.getBoolean("fav");
+        String Nom_pre = b.getString("Nom_pre");
+        int avatar = b.getInt("Avatar");
+        email.setText(titre);
+        nom.setText(Nom_pre);
+        tel.setText(tele);
+        image.setImageResource(avatar);
+        if(fav==true)
+        {
+            im.setImageResource(R.drawable.etoile_oui);
+        }
+        else im.setImageResource(R.drawable.etoile_non);
     }
 }
